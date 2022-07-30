@@ -1,4 +1,4 @@
-let quote = document.querySelector(".quoteArea");
+let quoteArea = document.querySelector(".quoteArea");
 let person = document.querySelector(".quoter");
 let newQuote = document.querySelector("#newQuote");
 
@@ -39,7 +39,7 @@ person: "—Estée Lauder"
 {quote: "“The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.”", 
 person: " — Winston Churchill"
 },
-{quote: "“Don’t let yesterday take up too much of today.”", 
+{quote: "“Do not let yesterday take up too much of today.”", 
 person: " — Will Rogers"
 },
 {quote: "“Concentrate all your thoughts upon the work in hand. The sun's rays do not burn until brought to a focus. “", 
@@ -49,3 +49,12 @@ person: " — Alexander Graham Bell"
 person: " — Paulo Coelho"
 }
 ]
+
+
+newQuote.addEventListener("click", function(){
+    let random = Math.floor(Math.random * quotes.length);
+    
+    quoteArea.innerText = quotes[random].quote;
+    person.innerText = quotes[random].person;
+} )
+
