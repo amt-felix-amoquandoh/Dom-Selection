@@ -60,22 +60,24 @@ body{
 }
 
 .quoteArea{
-  margin: 6px;
+  margin: 16px;
   line-height: 1.5;
   word-spacing: 3px;
 }
 
 .quoter{
   font-weight: bold;
-  font-size: larger;
+  font-size: large;
   margin-bottom: 5px;
   color: crimson;
   text-shadow: 5px;
   text-transform: uppercase;
   font-style: italic;
+  margin-top: 10px;
 }
 
 .btn{
+  margin-top: 10px;
   background-color: teal;
   color: white;
   padding: 10px 15px;
