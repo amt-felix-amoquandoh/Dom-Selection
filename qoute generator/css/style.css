@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 /* general styling */
 
 *{
@@ -8,7 +10,7 @@
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +40,10 @@ body{
   color: rgb(53, 53, 52);
   opacity: 1;
   box-shadow: 1px 3px 6px rgb(11, 11, 11);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .header{
@@ -49,6 +55,10 @@ body{
   padding: 5px 0;
   background: rgb(59, 59, 59);
   margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .mainContent{
@@ -63,6 +73,8 @@ body{
   margin: 16px;
   line-height: 1.5;
   word-spacing: 3px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
 }
 
 .quoter{
