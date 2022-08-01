@@ -56,5 +56,5 @@ newQuote.addEventListener("click", function(){
     
     quoteArea.innerText = quotes[random].saying;
     person.innerText = quotes[random].person;
-} )
+} );
 
