@@ -14,6 +14,10 @@ let leadingSeconds = 0;
 let leadingMinutes = 0;
 let leadingHours = 0;
 
+// times status display variables
+let timerStatus = "stopped";
+let timerInterval = null;
+
 //stopwatch function
 
 function stopWatch (){
@@ -48,4 +52,29 @@ function stopWatch (){
     leadingHours + ":" + leadingMinutes + ":" + leadingSeconds; 
 } 
 
-// window.setInterval(stopWatch, 1000);
+// start timer function
+function startTimer (){
+    if(timerStatus === "stopped"){
+        timerInterval = window.setInterval(stopWatch, 1000);
+        document.getElementById("startBtn").innerHTML = ` <ion-icon class="icon" id="pauseBtn" name="pause"></ion-icon>`;
+        timerStatus = "started";
+    } else {
+        window.clearInterval(timerInterval);
+        document.getElementById("startBtn").innerHTML = ` <ion-icon class="icon"  name="play"></ion-icon>`;
+        timerStatus = "stopped";
+    }
+}
+
+
+function resetTimer (){
+    window.clearInterval(timerInterval);
+     seconds = 0;
+     minutes = 0;
+     hours = 0;
+     document.getElementById("timer").innerHTML = "00:00:00"
+}
+
+
+
+playStopWatch.addEventListener("click", startTimer);
+resetStopWatch.addEventListener("click", resetTimer);

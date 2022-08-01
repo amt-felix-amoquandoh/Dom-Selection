@@ -38,43 +38,28 @@ body{
   margin: 20px;
 }
 
-.startBtn{
+#startBtn{
   background-color: green;
   padding: 8px 22px;
   border: none;
   border-radius: 10px;
   text-align: center;
 }
-.startBtn:hover{
-  background-color: gray;
-}
 
-.pauseBtn{
+#pauseBtn{
   background-color: orange;
-  padding: 8px 22px;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
-}
-.pauseBtn:hover{
-  background-color: gray;
 }
 
-.resetBtn{
+#resetBtn{
   background-color: red;
   padding: 8px 22px;
   border: none;
   border-radius: 10px;
   text-align: center;
 }
-.resetBtn:hover{
-  background-color: gray;
-}
+
 
 .icon{
   color: white;
   font-size: 38px;
-}
-.icon:hover{
-  color: black;
 }
