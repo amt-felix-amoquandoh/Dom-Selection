@@ -29,12 +29,10 @@ body{
 
 #timer{
   margin-bottom: 10px;
-}
-
-.timeDisplay{
   font-size: 3.2rem;
   color: tomato;
 }
+
 
 .buttonGroup{
   margin: 20px;
@@ -48,6 +46,17 @@ body{
   text-align: center;
 }
 .startBtn:hover{
+  background-color: gray;
+}
+
+.pauseBtn{
+  background-color: orange;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+.pauseBtn:hover{
   background-color: gray;
 }
 
