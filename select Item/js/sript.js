@@ -6,10 +6,10 @@ document.querySelector("#listGroup").addEventListener("click", function(e){
 })
 
 
-const listGroup = document.getElementById("listGroup");
-const newMovie = document.createElement("li");
+// const listGroup = document.getElementById("listGroup");
+// const newMovie = document.createElement("li");
 
-newMovie.innerText = prompt("add movie");
-newMovie.setAttribute("class", "list-group-item");
+// newMovie.innerText = prompt("add movie");
+// newMovie.setAttribute("class", "list-group-item");
 
-listGroup.appendChild(newMovie);
+// listGroup.appendChild(newMovie);
