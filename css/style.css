@@ -56,8 +56,76 @@ body{
 }
 
 .btn{
-  background-color: grey;
-  color: black;
+  background-color: teal;
+  color: white;
   margin: 100px 10px;
   padding: 10px 20px;
 }
+
+.btn:hover{
+  background-color: white;
+  color: teal;
+}
+
+.moveButtons{
+  margin-top: 30px;
+}
+
+.addButton{
+  margin-top: -60px;
+  margin-right: -174px;
+  color: white;
+}
+
+.addBtn{
+  color: white;
+  font-size: larger;  
+  background: coral;
+  font-weight: bold;
+}
+
+.addBtn:hover{
+  color: coral;
+  font-size: larger;  
+  background: white;
+}
+
+  /** media queries for responsive interface **/
+ /** tablet view **/
+ @media (min-device-width: 700px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 1){
+   
+  }
+
+
+
+/* media queries*/
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 700px)
+and (-webkit-min-device-pixel-ratio: 2){
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
