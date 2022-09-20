@@ -54,6 +54,17 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#list-group-item{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: lightgray;
+  list-style: none;
+  padding: 12px 120px;
+  font-size: 2rem;
+  color: rgb(23, 40, 40);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .list-group-item:hover{
   color: white;
   background: teal ;

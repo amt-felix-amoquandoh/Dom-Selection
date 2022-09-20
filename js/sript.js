@@ -15,8 +15,9 @@ allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
 addMovie.addEventListener("click", function(){
     let newMovie = prompt("Enter Movie");
+
     newMovies.append(newMovie);
-    newMovie.setAttribute("class", ".list-group-item")
+    newMovie.classList.add("list-group-items")
 })
 
 moveRight.addEventListener("click", function(){
