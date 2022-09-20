@@ -1,15 +1,16 @@
 let group1 = [];
 let group2 = [];
 let moveLeft = document.getElementsByClassName("btnLeft");
-let moveRight = document.getElementsByClassName("btnright");
+let moveRight = document.getElementsByClassName("btnRight");
 
-document.addEventListener("click", function(e){
-    const target = e.target;
-    if(target.matches("li")){
-        target.style.backgroundColor = "orange"
-    }
-})
+function allEventListeners(type, selector, callback){
+    document.addEventListener(type, e => {
+       if (e.target.matches(selector)) callback(e)
+    })
+}
 
+allEventListeners("click", "li", e => {e.target.style.backgroundColor = "orange"})
+allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
 
 
