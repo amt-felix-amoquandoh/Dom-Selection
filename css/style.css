@@ -119,93 +119,14 @@ and (-webkit-min-device-pixel-ratio: 2){}
 
 
 @media screen and (min-width: 768px){
-  :root{
-      --font-size-xl: 5.5rem;
-      --container-spacing: 0 8rem;
+  body{
+    margin: 0;
   }
-
-  .cover{
-      height: 100vh;
-  }
-
-  .scrollableImage{
-      height: auto;
-  }
-
-  .scrollImgDown{
-      top: 45%;
-  }
-
-  .scrollImgCenter{
-      top: 30%;
-  }   
-
-  .card{
-      grid-template-columns: repeat(2,1fr);
-      row-gap: 6.4rem;
-      margin-bottom: 20rem;
-  }
-
-  .cardImg{
-      grid-column: 1/-1;
-      width: 60rem;
-      height: 42rem;
-      justify-self: center;
-  }
-
-  .cardInfo{
-      grid-column: 1/-1;
-  }
-
-  .number{
-      font-size: 20rem;
-      left: -8rem;
-  }
-
-  .textLine{
-      margin-left: 9.5rem;
-  }
-
-  .textLine::before{
-      width: 7.2rem;
-      left: -9rem;
-  }
-
-  .cardHeading{
-      font-size: 6.4rem;
-  }
-
-
-  .footerContainer{
-      grid-template-columns: .75fr 1fr;
-      column-gap: 6.4rem;
-  }
-
-  .brandInfo{
-      order: 0;
-      max-width: 30rem;
-  }
-
-  .footerEnd{
-      order: 1;
-      grid-template-columns: repeat(2,1fr);
-      column-gap: 6.4rem;
-  }
-
-  .navLink:last-child{
-      margin-bottom: 0;
-  }
-
-  .copyright{
-      margin-top: 50px;
-      margin-bottom: 0;
-  }
-
 }
 
 @media screen and (min-width: 991px){
    body{
-    margin: auto;
+    margin: 0;
    }  
   
 }
