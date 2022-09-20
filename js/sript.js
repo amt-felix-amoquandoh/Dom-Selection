@@ -1,5 +1,5 @@
-let group1 = [];
-let group2 = [];
+let newMovies = document.getElementById("newMovies");
+let watchedMovies = document.getElementById("watchedMovies");;
 let moveLeft = document.getElementsByClassName("btnLeft");
 let moveRight = document.getElementsByClassName("btnRight");
 let addMovie = document.getElementById("addBtn");
@@ -14,7 +14,9 @@ allEventListeners("click", "li", e => {e.target.classList.toggle("listSelect")})
 allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
 addMovie.addEventListener("click", function(){
-    prompt("Enter Movie")
+    let newMovie = prompt("Enter Movie");
+    newMovies.append(newMovie);
+    newMovie.setAttribute("class", ".list-group-item")
 })
 
 moveRight.addEventListener("click", function(){
