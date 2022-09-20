@@ -9,7 +9,7 @@ function allEventListeners(type, selector, callback){
     })
 }
 
-allEventListeners("click", "li", e => {e.target.style.backgroundColor = "coral"})
+allEventListeners("click", "li", e => {e.target.classList.toggle("listSelect")})
 allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
 

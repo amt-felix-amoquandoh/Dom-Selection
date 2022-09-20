@@ -15,6 +15,14 @@ body{
   background-color: rgb(23, 40, 40);
 }
 
+.pageHeading{
+  text-align: center;
+  font-weight: bolder;
+  margin: 25px;
+  font-size: 4rem;
+  color: darkorange;
+}
+
 .container{
   text-align: center;
   padding: 15px 50px;
@@ -31,6 +39,7 @@ body{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
+  font-weight: bolder;
 }
 
 
@@ -50,41 +59,42 @@ body{
   background: teal ;
 }
 
+.listSelect{
+  background-color: coral;
+}
+
 .both{
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
-.btn{
-  background-color: teal;
-  color: white;
-  margin: 100px 10px;
+.btn{  
+  margin: 150px 10px;
   padding: 10px 20px;
 }
 
-.btn:hover{
+.moveButtons > button{
+  background-color: teal;
+  color: white;
+}
+
+.moveButtons > button:hover{
   background-color: white;
   color: teal;
 }
 
-.moveButtons{
-  margin-top: 30px;
-}
-
-.addButton{
-  margin-top: -60px;
-  margin-right: -174px;
-  color: white;
-}
-
-.addBtn{
+.addButton > button{
+  margin-top: 20px;
+  margin-left: -162px;
   color: white;
   font-size: larger;  
   background: coral;
   font-weight: bold;
 }
 
-.addBtn:hover{
+
+.addButton > button:hover{
   color: coral; 
   background: white;
 }
