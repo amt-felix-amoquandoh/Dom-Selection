@@ -59,6 +59,10 @@ body{
   background: teal ;
 }
 
+.list-group-item:active {
+  transform: translateY(4px);
+}
+
 .listSelect{
   background-color: coral;
 }
