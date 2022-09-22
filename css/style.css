@@ -55,6 +55,7 @@ body{
 }
 
 #list-group-item{
+  transition: all 0.5s;
   cursor: pointer;
   text-decoration: none;
   background-color: lightgray;
@@ -67,7 +68,8 @@ body{
 
 .list-group-item:hover{
   color: white;
-  background: teal ;
+  font-weight: bolder;
+  transform: scale(1.1);
 }
 
 .list-group-item:active {
