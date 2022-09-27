@@ -39,8 +39,9 @@ function addMovieToList (){
 }
 
 function addOnEnterKeypress(event) {
-        if(movieInput() > 0 && event.keyCode === 13 ){
+        if(movieInput() > 1 && event.key === "Enter" ){
             addNewMovie();
+            event.preventDefault();
     }
 }
 
