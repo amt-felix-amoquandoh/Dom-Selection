@@ -1,4 +1,5 @@
 let newMovie = document.getElementById("newMovie");
+let movieList = document.getElementById("newMovies");
 let watchedMovies = document.getElementById("watchedMovies");;
 let moveLeft = document.getElementsByClassName("btnLeft");
 let moveRight = document.getElementsByClassName("btnRight");
@@ -15,30 +16,49 @@ allEventListeners("click", "li", e => {e.target.classList.toggle("listSelect")})
 allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
 
+
 //input function
 function movieInput (){   
-    
+    return newMovie.value.length
 }
 
 
 
 function addNewMovie (){
-   
+    var movie = document.createElement("li");
+    movie.appendChild(document.createTextNode(newMovie.value));
+    movieList.appendChild(movie);
+    movie.classList.add("list-group-item")
+    newMovie.value = "";  
 }
 
-moveRight.addEventListener("click", function(){
-    console.log("right")
-})
+function addMovieToList (){
+    if(movieInput() > 0){
+        addNewMovie();
+}
+}
 
-moveLeft.addEventListener("click", function(){
-    console.log("left")
-})
+function addOnEnterKeypress(event) {
+        if(movieInput() > 0 && event.keyCode === 13 ){
+            addNewMovie();
+    }
+}
+
+addMovie.addEventListener("click", addMovieToList);
+addMovie.addEventListener("keypress", addOnEnterKeypress);
 
 
-// const listGroup = document.getElementById("listGroup");
-// const newMovie = document.createElement("li");
 
-// newMovie.innerText = prompt("add movie");
-// newMovie.setAttribute("class", "list-group-item");
 
-// listGroup.appendChild(newMovie);
+
+
+
+
+
+
+
+
+
+
+
+

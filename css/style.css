@@ -44,11 +44,12 @@ body{
 
 
 .list-group-item{
+  text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   background-color: lightgray;
   list-style: none;
-  padding: 12px 120px;
+  padding: 12px 20px;
   font-size: 2rem;
   font-weight: bold;
   color: coral;
@@ -66,7 +67,7 @@ body{
 }
 
 .listSelect{
-  background-color: coral;
+  background-color: teal;
   color: white;
 }
 
@@ -139,6 +140,21 @@ body{
 
 .addButton > button:hover{
   color: coral; 
+  background: white;
+}
+
+.removeBtn > button{
+  margin-top: 70px;
+  margin-left: -160px;
+  color: white;
+  font-size: larger;  
+  background: rgb(83, 26, 26);
+  font-weight: bold;
+}
+
+
+.removeBtn > button:hover{
+  color: rgb(83, 26, 26); 
   background: white;
 }
 
