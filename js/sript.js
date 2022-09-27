@@ -24,6 +24,8 @@ function movieInput (){
     return prompt().value.length
 }
 
+console.log(prompt().value.length);
+
 function addNewMovie (){
    
 }
