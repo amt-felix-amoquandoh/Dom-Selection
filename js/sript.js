@@ -1,4 +1,4 @@
-let newMovies = document.getElementById("newMovies");
+let newMovie = document.getElementById("newMovie");
 let watchedMovies = document.getElementById("watchedMovies");;
 let moveLeft = document.getElementsByClassName("btnLeft");
 let moveRight = document.getElementsByClassName("btnRight");
