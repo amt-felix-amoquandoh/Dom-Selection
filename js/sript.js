@@ -4,6 +4,7 @@ let moveLeft = document.getElementsByClassName("btnLeft");
 let moveRight = document.getElementsByClassName("btnRight");
 let addMovie = document.getElementById("addBtn");
 
+//general event listener
 function allEventListeners(type, selector, callback){
     document.addEventListener(type, e => {
        if (e.target.matches(selector)) callback(e)
@@ -13,12 +14,19 @@ function allEventListeners(type, selector, callback){
 allEventListeners("click", "li", e => {e.target.classList.toggle("listSelect")});
 allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
-addMovie.addEventListener("click", function(){
-    let newMovie = prompt("Enter Movie");
 
-    newMovies.append(newMovie);
-    newMovie.classList.add("list-group-items")
-})
+addMovie.addEventListener("click", function(){
+    prompt("Enter Movie");
+});
+
+//input function
+function movieInput (){   
+    return prompt().value.length
+}
+
+function addNewMovie (){
+   
+}
 
 moveRight.addEventListener("click", function(){
     console.log("right")
