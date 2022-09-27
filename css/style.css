@@ -81,6 +81,42 @@ body{
   padding: 10px 20px;
 }
 
+
+.modalTitle{
+  text-align: center;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modalBody{
+  padding: 0px 55px;
+  margin-bottom: -120px;
+}
+
+.modalAdd{
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: coral;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modalAdd:hover{
+  color: coral; 
+  background: white;
+}
+
+.form-outline{
+  margin-bottom: -120px;
+}
+
+.form-outline > input{
+  height: 30px;
+}
+
+
 .moveButtons > button{
   background-color: teal;
   color: white;

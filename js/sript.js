@@ -2,6 +2,7 @@ let newMovies = document.getElementById("newMovies");
 let watchedMovies = document.getElementById("watchedMovies");;
 let moveLeft = document.getElementsByClassName("btnLeft");
 let moveRight = document.getElementsByClassName("btnRight");
+let addMovie = document.getElementById("addBtn");
 
 //general event listener
 function allEventListeners(type, selector, callback){
@@ -16,10 +17,10 @@ allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
 
 //input function
 function movieInput (){   
-    return prompt().value.length
+    
 }
 
-console.log(prompt().value.length);
+
 
 function addNewMovie (){
    
