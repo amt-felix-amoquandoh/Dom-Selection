@@ -1,11 +1,13 @@
-let newMovie = document.getElementById("newMovie");
-let removeMovie = document.getElementById("removeBtn");
-let movieList = document.getElementById("newMovies");
-let watchedMovies = document.getElementById("watchedMovies");;
-let moveLeft = document.getElementsByClassName("btnLeft");
-let moveRight = document.getElementsByClassName("btnRight");
-let addMovie = document.getElementById("addBtn");
-let listedMovie = document.querySelector("li");
+const newMovie = document.getElementById("newMovie");
+const removeMovie = document.getElementById("removeBtn");
+const movieList = document.getElementById("newMovies");
+const watchedMovies = document.getElementById("watchedMovies");;
+const moveLeft = document.getElementsByClassName("btnLeft");
+const moveRight = document.getElementsByClassName("btnRight");
+const addMovie = document.getElementById("addBtn");
+const listedMovie = document.querySelector("li");
+
+let myMovies = []; 
 
 //general event listener
 let selectedMovie = listedMovie.addEventListener("click", function(e){
