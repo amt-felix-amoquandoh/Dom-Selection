@@ -3,6 +3,7 @@ let AlreadySeenMovies = [];
 let newMovieInput = document.getElementById("newMovieInput");
 let addNewMovie = document.getElementById("addNewBtn");
 let newMoviesList = document.getElementById("newMoviesList");
+let selectedMovie = document.querySelector(".list-group");
 
 // let removeMovie = document.getElementById("removeBtn");
 // let watchedMovies = document.getElementById("watchedMovies");;
@@ -43,9 +44,16 @@ function displayMovies (){
     newMoviesList.innerHTML = movies;
 }
 
+function selectMovie (e){
+    const target = e.target;
+    if (target.matches("li")){
+         target.classList.toggle("listSelect");
+    }
+}
 
 
 
+selectedMovie.addEventListener("click", selectMovie);
 addNewMovie.addEventListener("click", addMovieToList);
 
 
