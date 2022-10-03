@@ -39,7 +39,10 @@ body{
   font-weight: bolder;
   margin: 25px;
   font-size: 4rem;
-  color: darkorange;
+  color: rgb(50, 163, 139);
+  --animate-duration: 5s;
+  --animate-delay: 15s;
+  --animate-repeat: 1;
 }
 
 .container{
@@ -146,7 +149,6 @@ body{
 .form-outline > input{
   height: 30px;
 }
-
 
 .moveButtons > button{
   background-color: teal;
