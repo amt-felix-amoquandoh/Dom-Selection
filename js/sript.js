@@ -1,13 +1,3 @@
-// function allEventListeners(type, selector, callback){
-//     document.addEventListener(type, e => {
-//        if (e.target.matches(selector)) callback(e)
-//     })
-// }
-// allEventListeners("click", "li", e => {e.target.classList.toggle("listSelect")});
-// allEventListeners("click", "ion-icon", e => {console.log("guyyyyyyyyyyy")})
-
-
-
 let myMovies = [];
 let AlreadySeenMovies = []; 
 let newMovieInput = document.getElementById("newMovieInput");
