@@ -11,13 +11,24 @@ html {
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(23, 40, 40);
-  background-image: url("../img/chris-murray-iwfHhOZLVMU-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+body::before{
+  background-image: linear-gradient(
+    115deg,
+    rgb(120, 69, 80),
+    rgba(161, 145, 148, 0.5)
+  ), url('../img/chris-murray-iwfHhOZLVMU-unsplash.jpg');
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 
 .pageHeading{
   text-align: center;
