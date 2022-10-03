@@ -16,8 +16,7 @@ body{
   background-image: url("../img/chris-murray-iwfHhOZLVMU-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  opacity:;
-  
+  background-size: cover;
 }
 
 .pageHeading{
