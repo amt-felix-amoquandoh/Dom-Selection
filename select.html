@@ -16,12 +16,12 @@
 </head>
   
 <body>
-  <p class="pageHeading animate__animated animate__rubberBand animate__repeat-5">My Movies Library</p>
+  <p class="pageHeading animate__animated animate__rubberBand animate__repeat-3">My Movies Library</p>
   <div class="both">
     <div class="container">
       <p id="mainHeading">New Movies</p>
-      <ul id="newMovies" class="list-group">      
-        <li id="listItem1" class="list-group-item px-3 border-0 rounded-3  mb-2">Egya Koo in UK</li>
+      <ul id="newMoviesList" class="list-group">      
+        
       </ul>
     </div>
 
@@ -52,11 +52,11 @@
       </div>
       <div class="modalBody">
         <div class="form-outline">
-          <input type="text" id="newMovie" class="form-control" />
+          <input type="text" id="newMovieInput" class="form-control" />
           <label class="form-label" for="newMovie">movie title</label>
         </div>
         <button type="button" class="btn btn-secondary modalClose" data-mdb-dismiss="modal">Close</button>
-        <button id="addBtn" type="button" class="btn modalAdd">Add to List</button>
+        <button id="addNewBtn" type="button" class="btn modalAdd">Add to List</button>
       </div>
       
     </div>

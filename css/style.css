@@ -38,7 +38,7 @@ body{
   text-align: center;
   font-weight: bolder;
   margin: 25px;
-  font-size: 4rem;
+  font-size: 4.3rem;
   color: rgb(50, 163, 139);
   --animate-duration: 5s;
   --animate-delay: 15s;
@@ -47,6 +47,7 @@ body{
 
 
 .container{
+  max-height: max-content;
   opacity: none;
   text-align: center;
   padding: 15px 50px;
@@ -143,6 +144,9 @@ body{
   margin-right: auto;
 }
 
+.movieDisplay{
+  display: none;
+}
 
 .form-outline{
   margin-bottom: -120px;
@@ -206,18 +210,21 @@ body{
   background: white;
 }
 
+
   /** media queries for responsive interface **/
  /** tablet view **/
  @media (min-device-width: 700px) 
   and (max-device-width: 1280px)
-  and (-webkit-min-device-pixel-ratio: 1){}
+  and (-webkit-min-device-pixel-ratio: 1){
+    
+  }
 
 
 
 
 
 /* media queries*/
-/** tablet view **/
+/** phone view **/
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 700px)
