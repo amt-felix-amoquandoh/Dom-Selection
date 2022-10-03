@@ -11,8 +11,13 @@ html {
   box-sizing: border-box;
 }
 
+
 body::before{
-  background-image: linear-gradient(0deg, #f44336 0%, #378231 100%), url('../img/chris-murray-iwfHhOZLVMU-unsplash.jpg');
+  background-image: linear-gradient(
+    98deg,
+    rgb(123,63,0),
+    rgb(123,63,0, 0.5)
+  ), url('../img/chris-murray-iwfHhOZLVMU-unsplash.jpg');
     content: '';
     position: fixed;
     top: 0;
@@ -25,6 +30,9 @@ body::before{
     background-position: center;
 }
 
+body{
+  opacity: none;
+}
 
 .pageHeading{
   text-align: center;
@@ -32,11 +40,6 @@ body::before{
   margin: 25px;
   font-size: 4rem;
   color: darkorange;
-  background-image: -webkit-linear-gradient(0deg, #76e2a6 0%, #828032 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
 }
 
 .container{
@@ -69,12 +72,13 @@ body::before{
   padding: 12px 20px;
   font-size: 2rem;
   font-weight: bold;
-  color: coral;
+  color: rgb(1, 51, 51);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .list-group-item:hover{
   color: white;
+  background-color: rgb(1, 51, 51);
   font-weight: bolder;
   transform: scale(1.1);
 }
@@ -116,13 +120,13 @@ body::before{
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  background-color: coral;
+  background-color: rgb(1, 51, 51);
   margin-left: auto;
   margin-right: auto;
 }
 
 .modalAdd:hover{
-  color: coral; 
+  color: rgb(1, 51, 51); 
   background: white;
 }
 
@@ -149,6 +153,14 @@ body::before{
   color: white;
 }
 
+.btnRight:active {
+  transform: translateY(4px);
+}
+
+.btnLeft:active {
+  transform: translateY(4px);
+}
+
 .moveButtons > button:hover{
   background-color: white;
   color: teal;
@@ -159,13 +171,16 @@ body::before{
   margin-left: -162px;
   color: white;
   font-size: larger;  
-  background: coral;
+  background: rgb(1, 51, 51);
   font-weight: bold;
 }
 
+.addButton:active {
+  transform: translateY(4px);
+}
 
 .addButton > button:hover{
-  color: coral; 
+  color: rgb(1, 51, 51); 
   background: white;
 }
 
@@ -178,6 +193,9 @@ body::before{
   font-weight: bold;
 }
 
+.removeBtn:active {
+  transform: translateY(4px);
+}
 
 .removeBtn > button:hover{
   color: rgb(83, 26, 26); 
