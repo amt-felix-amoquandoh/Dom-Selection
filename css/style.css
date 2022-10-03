@@ -82,6 +82,10 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.rightSide{
+  float: right;
+}
+
 .list-group-item:hover{
   color: white;
   background-color: rgb(1, 51, 51);
