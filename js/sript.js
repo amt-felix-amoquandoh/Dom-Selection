@@ -4,8 +4,9 @@ let newMovieInput = document.getElementById("newMovieInput");
 let addNewMovie = document.getElementById("addNewBtn");
 let newMoviesList = document.getElementById("newMoviesList");
 let selectedMovie = document.querySelector(".list-group");
+let removeMovies = document.getElementById("removeBtn");
 
-// let removeMovie = document.getElementById("removeBtn");
+
 // let watchedMovies = document.getElementById("watchedMovies");;
 // let moveLeft = document.getElementsByClassName("btnLeft");
 // let moveRight = document.getElementsByClassName("btnRight");
@@ -45,21 +46,27 @@ function displayMovies (){
         "</li>"
     }
     newMoviesList.innerHTML = movies;
+    console.log(movies)
 }
 
-function moveMovie(){
-    storedMovies.remove()
-}
+
 
 function selectMovie (e){
-    const target = e.target;
+    let target = e.target;
     if (target.matches("li")){
          target.classList.toggle("listSelect");
+         console.log(target)
     }
 }
 
+function removeAllMovies (){
+    localStorage.clear();
+    myMovies = [];
+    displayMovies();
+}
 
 
+removeMovies.addEventListener("click", removeAllMovies)
 selectedMovie.addEventListener("click", selectMovie);
 addNewMovie.addEventListener("click", addMovieToList);
 
