@@ -51,7 +51,7 @@ body{
   opacity: none;
   text-align: center;
   padding: 15px 50px;
-  width: 480px;
+  width: 420px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -82,15 +82,20 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.rightSide{
+.closeBtn{
   float: right;
+  color: brown;
+  margin-top: 5px;
+}
+
+.closeBtn:hover{
+  color: white;
 }
 
 .list-group-item:hover{
   color: white;
   background-color: rgb(1, 51, 51);
   font-weight: bolder;
-  transform: scale(1.1);
 }
 
 .list-group-item:active {
@@ -198,7 +203,7 @@ body{
 
 .removeBtn > button{
   margin-top: 70px;
-  margin-left: -160px;
+  margin-left: -152px;
   color: white;
   font-size: larger;  
   background: rgb(83, 26, 26);

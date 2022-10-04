@@ -21,7 +21,7 @@ let selectedMovie = document.querySelector(".list-group");
 //     return selectedMovie;
 // })
 
-let storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
+const storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
 if(storedMovies){
     myMovies = storedMovies;
     displayMovies();
@@ -39,9 +39,16 @@ function addMovieToList (){
 function displayMovies (){
     let movies = "";
     for(let i = 0;i < myMovies.length; i++){
-        movies += "<li class='list-group-item'>" + myMovies[i] + "</li>"
+        movies += "<li class='list-group-item'>" + 
+        myMovies[i] +
+        "<ion-icon class='closeBtn' type='button' name='close-circle-outline' onclick='moveMovie()'></ion-icon>" + 
+        "</li>"
     }
     newMoviesList.innerHTML = movies;
+}
+
+function moveMovie(){
+    storedMovies.remove()
 }
 
 function selectMovie (e){
