@@ -8,12 +8,20 @@ let removeMovies = document.getElementById("removeBtn");
 let closeMovie = document.getElementsByClassName("closeBtn");
 
 
-
 const storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
 if(storedMovies){
     myMovies = storedMovies;
     displayMovies();
 }
+
+// function addMovieToList (){    
+//     if(newMovieInput.value.length > 1){
+//         myMovies.push(newMovieInput.value);
+//     }  
+//     newMovieInput.value = "";
+//     localStorage.setItem("myMovies", JSON.stringify(myMovies));
+//     displayMovies();  
+// }
 
 
 function addMovieToList (){    
@@ -26,19 +34,21 @@ function addMovieToList (){
 }
 
 
+
+
 function displayMovies (){
     let movies = "";
     for(let i = 0;i < myMovies.length; i++){
         movies += "<li class='list-group-item'>" + 
         myMovies[i] +
-        "<ion-icon class='closeBtn' type='button' name='close-circle-outline'></ion-icon>" + 
+        "<ion-icon class='closeBtn' type='button' name='close-circle-outline' onclick='moveMovie()'></ion-icon>" + 
         "</li>"
     }
     newMoviesList.innerHTML = movies;    
 }
 
 function moveMovie(){
-    console.log("trieeeeeeeee")
+    
 }
 
 
