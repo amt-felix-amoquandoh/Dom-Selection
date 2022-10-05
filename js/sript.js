@@ -42,22 +42,20 @@ function displayMovies (){
         myMovies[i] +
         "<ion-icon class='closeBtn' type='button' name='close-circle-outline' onclick='moveMovie()'></ion-icon>" + 
         "</li>"
-        
     }
     newMoviesList.innerHTML = movies;
+    console.log(movies.parentNode)
 }
 
-function moveMovie (){
+function moveMovie(film){
     
 }
-
 
 
 function selectMovie (e){
     let target = e.target;
     if (target.matches("li")){
          target.classList.toggle("listSelect");
-         console.log(target)
     }
 }
 
