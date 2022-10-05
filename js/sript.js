@@ -8,6 +8,7 @@ let removeMovies = document.getElementById("removeBtn");
 let closeMovie = document.getElementsByClassName("closeBtn");
 
 
+
 const storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
 if(storedMovies){
     myMovies = storedMovies;
