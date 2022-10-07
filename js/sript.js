@@ -14,15 +14,6 @@ if(storedMovies){
     displayMovies();
 }
 
-// function addMovieToList (){    
-//     if(newMovieInput.value.length > 1){
-//         myMovies.push(newMovieInput.value);
-//     }  
-//     newMovieInput.value = "";
-//     localStorage.setItem("myMovies", JSON.stringify(myMovies));
-//     displayMovies();  
-// }
-
 
 function addMovieToList (){    
     if(newMovieInput.value.length > 1){
