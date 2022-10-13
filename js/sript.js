@@ -47,9 +47,7 @@ function displayMovies (){
     newMoviesList.innerHTML = movies;    
 }
 
-function moveMovie(){
-    
-}
+
 
 
 function selectMovie (e){
