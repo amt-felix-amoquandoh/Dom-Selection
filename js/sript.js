@@ -1,12 +1,9 @@
 let myMovies = [];
 let AlreadySeenMovies = []; 
-let newMovieInput = document.getElementById("newMovieInput");
+const newMovieInput = document.getElementById("newMovieInput");
 const addNewMovie = document.getElementById("addNewBtn");
 let newMoviesList = document.getElementById("newMoviesList");
-let selectedMovie = document.querySelector(".list-group");
 let removeMovies = document.getElementById("removeBtn");
-let closeMovie = document.getElementsByClassName("closeBtn");
-let userSelectedMovie = null;
 
 const storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
 if(storedMovies){
@@ -19,7 +16,22 @@ function saveToStorage (movies){
 }
 
 
-function addMovieToList (){    
+function addMovieToList (){   
+    let newMovies = document.createElement("ul");
+    newMovies.classList.add("list-group");
+
+    let newMovie = document.createElement("li");
+    newMovie.innerText = `${newMovieInput.value}`;
+    newMovies.appendChild(newMovie);
+
+    let closeMovieBtn = document.createElement("span");
+    closeMovieBtn.innerHTML = `<ion-icon type="button" name="close-circle-outline"></ion-icon>`
+    closeMovieBtn.classList.add("closeBtn");
+    newMovie.appendChild(closeMovieBtn);
+
+    if( newMovieInput.value === ""){
+        alert("enter movie")
+    }
     
      
     newMovieInput.value = "";
@@ -47,7 +59,7 @@ function removeAllMovies (){
 }
 
 removeMovies.addEventListener("click", removeAllMovies)
-selectedMovie.addEventListener("click", selectMovie);
+
 addNewMovie.addEventListener("click", addMovieToList);
 
 
