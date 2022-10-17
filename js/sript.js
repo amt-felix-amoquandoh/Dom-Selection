@@ -40,13 +40,17 @@ function displayMovies (){
         "</li>"
     }
     newMoviesList.innerHTML = movies;    
-}
+// }
 
-function onDeleteMovie(passedMovie){
-   const selectedId = myMovies.findIndex( movie => movie === passedMovie);
-   const filteredMovies = myMovies.splice(selectedId, 1);
-   saveToStorage(filteredMovies);
-}
+// <<<<<<< HEAD
+// function onDeleteMovie(passedMovie){
+//    const selectedId = myMovies.findIndex( movie => movie === passedMovie);
+//    const filteredMovies = myMovies.splice(selectedId, 1);
+//    saveToStorage(filteredMovies);
+// }
+// =======
+
+// >>>>>>> f8b0ae5642f10f6e9afd8dafbb483b7800e5c325
 
 
 function selectMovie (e){
