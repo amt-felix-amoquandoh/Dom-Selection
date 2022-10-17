@@ -20,9 +20,8 @@ function saveToStorage (movies){
 
 
 function addMovieToList (){    
-    if(newMovieInput.value.length > 1){
-        myMovies.push(newMovieInput.value);
-    }  
+    
+     
     newMovieInput.value = "";
     saveToStorage(myMovies);
     displayMovies();  
@@ -34,42 +33,18 @@ function addMovieToList (){
 function displayMovies (){
     let movies = "";
     for(let i = 0;i < myMovies.length; i++){
-        movies += "<li class='list-group-item'>" + 
-        myMovies[i] +
-        "<ion-icon class='closeBtn' type='button' name='close-circle-outline' onclick='onDeleteMovie(`${myMovie[i]}`)'></ion-icon>" + 
-        "</li>"
+        
     }
     newMoviesList.innerHTML = movies;    
-// }
-
-// <<<<<<< HEAD
-// function onDeleteMovie(passedMovie){
-//    const selectedId = myMovies.findIndex( movie => movie === passedMovie);
-//    const filteredMovies = myMovies.splice(selectedId, 1);
-//    saveToStorage(filteredMovies);
-// }
-// =======
-
-// >>>>>>> f8b0ae5642f10f6e9afd8dafbb483b7800e5c325
+ }
 
 
-function selectMovie (e){
-    let target = e.target;
-    if (target.contains("li")){
-         target.classList.toggle("listSelect");
-    }
-}
 
 function removeAllMovies (){
     localStorage.clear();
     myMovies = [];
     displayMovies();
 }
-
-function onUserSelectedMovie (selectedMovie){
-    userSelectedMovie = selectedMovie;
-}
-
 
 removeMovies.addEventListener("click", removeAllMovies)
 selectedMovie.addEventListener("click", selectMovie);
