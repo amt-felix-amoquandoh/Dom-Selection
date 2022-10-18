@@ -10,8 +10,8 @@ if(storedMovies){
     myMovies = storedMovies;
 }
 
-function saveToStorage (movies){
-    localStorage.setItem("myMovies", JSON.stringify(movies));
+function saveToStorage (movie){
+    localStorage.setItem("myMovies", JSON.stringify(movie));
 }
 
 
@@ -36,25 +36,25 @@ function addMovieToList (){
         newMoviesList.appendChild(newMovies)
     }
 
-    myMovies.push(newMovieInput);
-    newMovieInput.value = "";
-    saveToStorage(myMovies);
-    console.log(myMovies)
-
     closeMovieBtn.addEventListener("click", function(e){
         let target = e.target;
-        target.parentElement.parentElement.remove();
+        let targetedMovie = target.parentElement.parentElement;
+        targetedMovie.remove();
+        localStorage.removeItem(targetedMovie);
     })
+
+    myMovies.push(newMovieInput.value);
+    newMovieInput.value = "";
+    saveToStorage(myMovies);
+    console.log(myMovies)  
     
 }
-
 
 
 
 function removeAllMovies (){
     localStorage.clear();
     myMovies = [];
-    displayMovies();
 }
 
 removeMovies.addEventListener("click", removeAllMovies)
