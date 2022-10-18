@@ -2,7 +2,7 @@ let myMovies = [];
 let AlreadySeenMovies = []; 
 const newMovieInput = document.getElementById("newMovieInput");
 const addNewMovie = document.getElementById("addNewBtn");
-let newMoviesList = document.getElementById("newMoviesList");
+const newMoviesList = document.getElementById("movieContainer");
 let removeMovies = document.getElementById("removeBtn");
 
 const storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
@@ -22,7 +22,9 @@ function addMovieToList (){
 
     let newMovie = document.createElement("li");
     newMovie.innerText = `${newMovieInput.value}`;
+    newMovie.classList.add("list-group-item");
     newMovies.appendChild(newMovie);
+
 
     let closeMovieBtn = document.createElement("span");
     closeMovieBtn.innerHTML = `<ion-icon type="button" name="close-circle-outline"></ion-icon>`
@@ -30,13 +32,15 @@ function addMovieToList (){
     newMovie.appendChild(closeMovieBtn);
 
     if( newMovieInput.value === ""){
-        alert("enter movie")
+        alert("sorry enter a movie")
+    } else{
+        newMoviesList.appendChild(newMovies)
     }
     
-     
+    myMovies.push(newMovieInput);
     newMovieInput.value = "";
     saveToStorage(myMovies);
-    displayMovies();  
+    console.log(myMovies)
 }
 
 
