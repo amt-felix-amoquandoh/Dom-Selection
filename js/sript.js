@@ -36,8 +36,13 @@ function addMovieToList (){
     } else{
         newMoviesList.appendChild(newMovies)
     }
+
+    closeMovieBtn.addEventListener("click", function(){
+        let target = e.target;
+        target.parentElement.remove();
+    })
     
-    myMovies.push(newMovieInput);
+    myMovies.push(newMovie);
     newMovieInput.value = "";
     saveToStorage(myMovies);
     console.log(myMovies)
