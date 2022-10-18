@@ -46,10 +46,10 @@ function addMovieToList (){
     myMovies.push(newMovieInput.value);
     newMovieInput.value = "";
     saveToStorage(myMovies);
-    console.log(myMovies)  
-    
+    console.log(myMovies)    
 }
 
+// 0501217514
 
 
 function removeAllMovies (){
