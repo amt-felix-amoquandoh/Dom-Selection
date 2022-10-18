@@ -8,7 +8,6 @@ let removeMovies = document.getElementById("removeBtn");
 const storedMovies = JSON.parse(localStorage.getItem("myMovies")); 
 if(storedMovies){
     myMovies = storedMovies;
-    displayMovies();
 }
 
 function saveToStorage (movies){
@@ -37,27 +36,18 @@ function addMovieToList (){
         newMoviesList.appendChild(newMovies)
     }
 
-    closeMovieBtn.addEventListener("click", function(){
-        let target = e.target;
-        target.parentElement.remove();
-    })
-    
-    myMovies.push(newMovie);
+    myMovies.push(newMovieInput);
     newMovieInput.value = "";
     saveToStorage(myMovies);
     console.log(myMovies)
+
+    closeMovieBtn.addEventListener("click", function(e){
+        let target = e.target;
+        target.parentElement.parentElement.remove();
+    })
+    
 }
 
-
-
-
-function displayMovies (){
-    let movies = "";
-    for(let i = 0;i < myMovies.length; i++){
-        
-    }
-    newMoviesList.innerHTML = movies;    
- }
 
 
 
