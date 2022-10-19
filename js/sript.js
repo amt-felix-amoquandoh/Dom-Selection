@@ -46,7 +46,7 @@ function addMovieToList (){
     myMovies.push(newMovieInput.value);
     newMovieInput.value = "";
     saveToStorage(myMovies);
-    console.log(myMovies)    
+    console.log(newMovieInput.value)    
 }
 
 // 0501217514
