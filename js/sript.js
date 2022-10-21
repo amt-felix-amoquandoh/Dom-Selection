@@ -49,7 +49,19 @@ function addMovieToList (){
     console.log(newMovieInput.value)    
 }
 
-// 0501217514
+
+// function selectedMovie (){
+//     document.querySelector(".list-group-item").addEventListener("click", function(e){
+//        console.log("wona")
+//         const target = e.target;
+//         if(target.matches("li")){
+//             target.classList.toggle("listSelect");
+//         }  
+//     })
+// }
+
+
+
 
 
 function removeAllMovies (){
@@ -61,7 +73,7 @@ removeMovies.addEventListener("click", removeAllMovies)
 
 addNewMovie.addEventListener("click", addMovieToList);
 
-
+// 0501217514
 
 
 
