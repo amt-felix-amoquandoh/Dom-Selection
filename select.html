@@ -1,48 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="" />
-  <title>Document</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css" />
-</head> 
- 
-<body>
-  <div class="both">
-    <div class="container">
-      <p id="mainHeading">New Movies</p>
-      <ul id="listGroup" class="list-group">      
-        <li id="listItem1" class="list-group-item px-3 border-0 rounded-3  mb-2">Egya Koo in UK</li>
-        <li id="listItem2" class="list-group-item px-3 border-0 rounded-3  mb-2">Azonto Ghost</li>
-        <li id="listItem3" class="list-group-item px-3 border-0 rounded-3  mb-2">Kai Me Br3 1&2</li>
-      </ul>
+  <body>
+    <p class="pageHeading animate__animated animate__bounce animate__repeat-3">
+      My Movies Library
+    </p>
+    <div class="both">
+      <div class="container">
+        <p id="mainHeading">New Movies</p>
+        <div id="movieContainer">
+          <ul id="newMoviesList" class="list-group">
+            <!--  -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="moveButtons">
+        <button class="btn btnLeft" type="button">
+          <ion-icon size="large" name="arrow-back"></ion-icon>
+        </button>
+        <button class="btn btnRight" type="button">
+          <ion-icon size="large" name="arrow-forward"></ion-icon>
+        </button>
+      </div>
+
+      <div class="removeBtn">
+        <button id="removeBtn" type="button" class="btn deleteBtn">
+          Remove all
+        </button>
+      </div>
+
+      <!-- Button trigger modal -->
+      <div class="addButton">
+        <button
+          type="button"
+          class="btn addBtn"
+          data-mdb-toggle="modal"
+          data-mdb-target="#exampleModal"
+        >
+          Add new movie
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modalTitle" id="exampleModalLabel">Add movie here</h2>
+            </div>
+            <div class="modalBody">
+              <div class="form-outline">
+                <input type="text" id="newMovieInput" class="form-control" />
+                <label class="form-label" for="newMovie">movie title</label>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary modalClose"
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button>
+              <button id="addNewBtn" type="button" class="btn modalAdd">
+                Add to List
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p id="mainHeading">Watched movies</p>
+        <ul id="watchedMovies" class="list-group"></ul>
+      </div>
     </div>
 
-   <div>
-    <button class="btn" type="button"><ion-icon size="large" name="arrow-back"></ion-icon></button>
-    <button class="btn" type="button"><ion-icon size="large" name="arrow-forward"></ion-icon></button>
-   </div>
-  
-    <div class="container">
-      <p id="mainHeading">Watched movies</p>
-      <ul id="listGroup" class="list-group">      
-        <li id="listItem1" class="list-group-item px-3 border-0 rounded-3  mb-2">Egya Koo in UK</li>
-        <li id="listItem2" class="list-group-item px-3 border-0 rounded-3  mb-2">Azonto Ghost</li>
-        <li id="listItem3" class="list-group-item px-3 border-0 rounded-3  mb-2">Kai Me Br3 1&2</li>
-      </ul>
-    </div>
-  </div>
- 
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
-  <script type="text/javascript" src="./js/sript.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/sript.js"></script>
+  </body>
 </html>

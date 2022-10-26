@@ -11,14 +11,47 @@ html {
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(23, 40, 40);
+
+body::before{
+  background-image: linear-gradient(
+    98deg,
+    rgb(123,63,0),
+    rgb(123,63,0, 0.5)
+  ), url('../img/chris-murray-iwfHhOZLVMU-unsplash.jpg');
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+body{
+  opacity: none;
+}
+
+.pageHeading{
+  text-align: center;
+  font-weight: bolder;
+  margin: 25px;
+  font-size: 4.3rem;
+  color: rgb(50, 163, 139);
+  --animate-duration: 5s;
+  --animate-delay: 15s;
+  --animate-repeat: 1;
+}
+
+
 .container{
+  max-height: max-content;
+  opacity: none;
   text-align: center;
   padding: 15px 50px;
-  width: 480px;
+  width: 420px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -31,37 +64,204 @@ body{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
+  font-weight: bolder;
 }
 
 
 .list-group-item{
+  margin-bottom: 5px;
+  text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   background-color: lightgray;
   list-style: none;
-  padding: 12px 120px;
+  padding: 12px 20px;
   font-size: 2rem;
-  color: rgb(23, 40, 40);
+  font-weight: bold;
+  color: rgb(1, 51, 51);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.closeBtn{
+  float: right;
+  color: brown;
+  margin-top: 5px;
+}
+
+.closeBtn:hover{
+  color: white;
 }
 
 /* .list-group-item:hover{
   color: white;
-  background: teal ;
+  background-color: rgb(1, 51, 51);
+  font-weight: bolder;
 } */
+
+/* .list-group-item:active {
+  transform: translateY(4px);
+} */
+
+.listSelect{
+  background-color: orange;
+  color: white;
+}
 
 .both{
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
-.btn{
-  background-color: grey;
-  color: black;
-  margin: 100px 10px;
+.btn{  
+  margin: 150px 10px;
   padding: 10px 20px;
 }
 
-.selectedItem{
-  background-color: orange;
+
+.modalTitle{
+  text-align: center;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.modalBody{
+  padding: 0px 55px;
+  margin-bottom: -120px;
+}
+
+.modalAdd{
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(1, 51, 51);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modalAdd:hover{
+  color: rgb(1, 51, 51); 
+  background: white;
+}
+
+.modalClose{
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movieDisplay{
+  display: none;
+}
+
+.form-outline{
+  margin-bottom: -120px;
+}
+
+.form-outline > input{
+  height: 30px;
+}
+
+.moveButtons > button{
+  background-color: teal;
+  color: white;
+}
+
+.btnRight:active {
+  transform: translateY(4px);
+}
+
+.btnLeft:active {
+  transform: translateY(4px);
+}
+
+.moveButtons > button:hover{
+  background-color: white;
+  color: teal;
+}
+
+.addButton > button{
+  margin-top: 20px;
+  margin-left: -162px;
+  color: white;
+  font-size: larger;  
+  background: rgb(1, 51, 51);
+  font-weight: bold;
+}
+
+.addButton:active {
+  transform: translateY(4px);
+}
+
+.addButton > button:hover{
+  color: rgb(1, 51, 51); 
+  background: white;
+}
+
+.removeBtn > button{
+  margin-top: 70px;
+  margin-left: -152px;
+  color: white;
+  font-size: larger;  
+  background: rgb(83, 26, 26);
+  font-weight: bold;
+}
+
+.removeBtn:active {
+  transform: translateY(4px);
+}
+
+.removeBtn > button:hover{
+  color: rgb(1, 51, 51); 
+  background: white;
+}
+
+
+  /** media queries for responsive interface **/
+ /** tablet view **/
+ @media (min-device-width: 700px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 1){
+    
+  }
+
+
+
+
+
+/* media queries*/
+/** phone view **/
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 700px)
+and (-webkit-min-device-pixel-ratio: 2){}
+
+
+
+@media screen and (min-width: 768px){
+  body{
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 991px){
+   body{
+    margin: 0;
+   }  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
